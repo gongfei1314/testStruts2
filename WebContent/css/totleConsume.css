@@ -1,0 +1,69 @@
+/* CSS Document */
+#leftwin{
+width:200px;
+height:350px;
+border:1px solid #CCCCCC;
+float:left;
+margin-top:5px;
+}
+#rightwin{
+margin-left:18px;
+float:left;
+
+}
+table{
+border:1px solid #CCCCCC;
+margin-top:5px;
+
+}
+td{
+
+width:77px;
+height:30px;
+}
+
+table input[type="button"]{
+float:left;
+}
+
+#classes{
+text-align:left;
+padding-top:10px;
+padding-left:20px;
+}
+#classes select{
+margin-left: 20px;
+background: rgb(255,232,230);
+width: 145px;
+}
+#classes ul li{
+padding-left:10px;
+}
+
+#dateTimes{
+text-align:left;
+padding-top:10px;
+padding-left:20px;
+}
+#dateTimes ul li{
+padding-left:20px;
+}
+#dateTimes ul li input[type='text']{
+background: rgb(255,232,230);
+}
+
+#otherTerm{
+text-align:left;
+padding-top:10px;
+padding-left:20px;
+}
+#otherTerm ul li textarea{
+margin-left:20px;
+width: 145px;
+background: rgb(255,232,230);
+}
+
+#search{
+margin-top: 10px;
+
+}

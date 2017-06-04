@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- @@@@@@@@@@@@  struts2 常用的常量介绍 START  @@@@@@@@@@@@@ -->	
+    
+    <!-- **********修改访问路径的后缀*******可以处理多种访问后缀**** -->
+    <constant name="struts.action.extension" value="action,do"></constant>
+    <!--********指定默认编码集**** -->
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+    <!-- ********国际化资源文件******** -->
+    <!-- ********设置浏览器是否缓存静态内容**** -->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+    <!-- struts配置文件修改后，不用重新部署,系统是否会自动重新加载(默认为false).开发阶段最好为true**** -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- ********打印出更为详细的错误信息**** -->
+	<constant name="struts.devMode" value="true"></constant>
+	 
+    <!-- @@@@@@@@@@@@  struts2 常用的常量介绍 END  @@@@@@@@@@@@@ -->
+    
+
+  <!-- 配置action -->
+  <!-- 登录 -->
+   <package name="loginPack" namespace="/loginPack" extends="struts-default" >
+        <action name="login" class="cn.com.action.LoginAction" method="login" >
+            <result name="success">/jsp/main.jsp
+            </result>
+        </action>
+    </package> 
+   
+    <!-- 通配符匹配配置action -->
+    <!-- 注册 -->
+     <package name="registPack" namespace="/registPack" extends="struts-default" >
+      <!-- 通配符匹配，‘{1}’ 表示 ‘*’ 的内容，  访问路径只需：<%=path%>/空间名/方法名.action-->
+      <!--     <action name="Login_*" class="cn.com.action.LoginAction" method="{1}"  > -->
+       <action name="*" class="cn.com.action.RegisterAction" method="{1}" > 
+        <result name="success">/jsp/login.jsp  </result>
+            <result name="error">/jsp/hello.jsp  </result>
+        </action>  
+    </package>
+    
+    <!-- 添加记录 -->
+    <package name="addBookPack" namespace="/addBookPack" extends="struts-default" >
+       <action name="*" class="cn.com.action.EditAction" method="{1}" > 
+          <result  name="success">
+              
+          </result>
+          <result name="error">/jsp/hello.jsp  </result>
+        </action>
+    </package>
+    
+    <!-- 编辑记录 -->
+    <package name="editBookPack" namespace="/editBookPack" extends="struts-default">
+       <action name="*" class="cn.com.action.EditAction" method="{1}">
+           <result name = "success"></result>
+           <result name="error">/jsp/hello.jsp</result>
+       </action>    
+    </package>
+    
+    <!-- 查询记录 -->
+    <package name="queryBookPack" namespace="/queryBookPack" extends="struts-default" >
+       <action name="*" class="cn.com.action.QueryAction" method="{1}" > 
+          <result  name="success">
+              /jsp/totleConsume.jsp
+          </result>
+          <result name="error">/jsp/hello.jsp  </result>
+        </action>
+    </package>
+
+    <!-- Add packages here -->
+</struts>

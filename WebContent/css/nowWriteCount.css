@@ -1,0 +1,34 @@
+/* CSS Document */
+.myConsume{
+border: 1px solid #CCCCCC ;
+width:100%;
+height:500px;
+
+}
+
+#cons li div{
+float:left
+}
+.regmain{
+text-align:center;
+width:40%;
+margin-top:30px;
+}
+ 
+.regwin input{
+margin-left:20px;
+}
+
+.regwin{
+margin-top:10px;
+}
+
+.high{
+margin-top:20px;
+}
+
+.marginleft{
+margin-left:220px;
+}
+
+

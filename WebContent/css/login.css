@@ -1,0 +1,52 @@
+/* login CSS Document */
+body{
+width:auto;
+background-color: #F5F5F5;
+align:left;
+font-family:"ÐÂËÎÌå";
+font-size:14px;
+background-image:url(../image/loginPic.jpg);
+background-repeat:no-repeat;
+background-position:50% 0%;
+
+}
+
+
+input{
+height:33px;
+width:178px;
+}
+
+
+#loginDiv{
+margin:270px 250px 100px 670px;
+
+}
+
+#loginBigwin{
+width:230px; 
+border: solid 1px #CCCCCC; 
+padding:30px 20px;
+background-color:#99CCCC;
+}
+
+
+#loginBtn{
+width: 225px; 
+background-color: blue;
+}
+
+#loginDiv a{
+text-decoration:none;
+}
+
+.loginwin{
+width:auto;
+padding:10px 2px 5px 2px;
+}
+
+
+#textUser{
+font-size:25px;
+
+}
